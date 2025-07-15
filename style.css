@@ -1,0 +1,534 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+  /* border: 0.1rem solid red; */
+}
+
+:root {
+  --lead: #212121;
+  --golden: #f2bd12;
+  --light-white: #fffdf7;
+  --hint-yellow: #fcf1cc;
+  --pure-white: #fff;
+}
+
+body {
+  background-color: var(--light-white);
+}
+
+/* BASIC STYLING */
+a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--lead);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+li {
+  list-style: none;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-3 {
+  gap: 3rem;
+}
+
+.wrapper {
+  max-width: 1400px;
+  padding-inline: 1.5rem;
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+.p-top {
+  padding-top: 10rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.mt-half {
+  margin-top: 0.5rem;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+/* HEADER STYLING */
+
+.navbar {
+  min-height: 14vh;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--golden);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background-color: var(--golden);
+  border-radius: 1rem;
+  font-size: 1.1rem;
+
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.096);
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--lead);
+  color: var(--pure-white);
+}
+
+.cart-icon {
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.cart-icon .cart-value {
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  font-size: 0.85rem;
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 100vw;
+  background-color: var(--golden);
+  text-align: center;
+  line-height: 20px;
+}
+
+.action .hamburger {
+  font-size: 1.5rem;
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.fa-bars {
+  transition: transform 1s ease-in-out;
+}
+
+/* SECTIONS STYLING */
+
+.hero-section {
+  min-height: calc(100vh -14vh);
+}
+
+.content,
+.image-container,
+.service-card {
+  flex: 1;
+  flex-basis: 300px;
+}
+
+.content h1 {
+  font-size: 5.6vw;
+  color: var(--lead);
+}
+
+.content h1 span {
+  color: var(--golden);
+}
+
+p {
+  font-size: 1.25rem;
+  color: gray;
+  line-height: 1.8rem;
+  font-weight: 400;
+}
+
+.para {
+  margin-block: 2rem;
+}
+
+.social-icon {
+  background-color: var(--hint-yellow);
+  width: 3rem;
+  font-size: 1.2rem;
+  aspect-ratio: 1;
+  border-radius: 1rem;
+  text-align: center;
+  line-height: 3rem;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.096);
+  transition: 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  background-color: var(--lead);
+  color: var(--pure-white);
+}
+
+.mt-one-half {
+  margin-top: 1.5rem;
+}
+
+/* SECTION 01 */
+
+h5 {
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  color: var(--golden);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3.7rem;
+  color: var(--lead);
+}
+
+.service-card h3 {
+  text-transform: capitalize;
+  font-size: 2rem;
+  color: var(--lead);
+  margin-block: 1.5rem;
+}
+
+/* SECTION 02 */
+
+.order-card {
+  flex: 1;
+  flex-basis: 300px;
+  padding: 0 1rem 2rem 1rem;
+  background-color: var(--pure-white);
+  border: 0.1rem solid var(--golden);
+  border-radius: 2rem;
+}
+
+.order-card img {
+  width: 15rem;
+  filter: drop-shadow(rgba(0, 0, 0, 0.208) 0 10px 10px);
+}
+
+h4 {
+  font-size: 1.8rem;
+  color: var(--lead);
+}
+
+.order-card .price {
+  font-size: 1.7rem;
+  color: var(--golden);
+  padding: 1.3rem 0 2rem 0;
+}
+
+/* CART TAB */
+
+.cart-tab {
+  background-color: var(--hint-yellow);
+  position: fixed;
+  inset: 0 -500px 0 auto;
+  width: 25rem;
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 99;
+  box-shadow: rgba(0, 0, 0, 0.2) -10px -10px 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.cart-tab-active {
+  inset: 0 0 0 auto;
+}
+
+.cart-list {
+  flex: 1;
+  width: 100%;
+  overflow: auto;
+  margin-top: 1.5rem;
+}
+
+.cart-list::-webkit-scrollbar {
+  width: 0;
+}
+
+.total-container {
+  width: 100%;
+  background-color: var(--golden);
+  text-align: center;
+  padding-block: 1rem;
+  margin-block: 1rem;
+}
+
+.total-container h4 {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.btn-container .btn {
+  background-color: var(--lead);
+  color: var(--pure-white);
+}
+
+.btn-container .btn:hover {
+  background-color: var(--golden);
+  color: var(--lead);
+}
+
+.item {
+  display: flex;
+  gap: 1rem;
+  padding: 0.7rem 1rem;
+  align-items: center;
+}
+
+.cart-list .item:nth-child(even) {
+  background-color: var(--light-white);
+}
+
+.item h4 {
+  font-size: 1.3rem;
+  color: var(--lead);
+}
+
+.item .description {
+  flex: 1;
+}
+
+.item .item-image img {
+  width: 5rem;
+}
+
+.item .item-total {
+  font-weight: 400;
+  margin-top: 0.3rem;
+}
+
+.quantity-btn {
+  background-color: var(--lead);
+  color: var(--pure-white);
+  width: 1.7rem;
+  aspect-ratio: 1;
+  border-radius: 100vw;
+  text-align: center;
+  line-height: 1.7rem;
+}
+
+.quantity-value {
+  font-weight: 400;
+  margin-inline: 0.6rem;
+  font-size: 1.2rem;
+}
+
+/* SECTION 03 */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.profile {
+  width: 4rem;
+  aspect-ratio: 1;
+  border-radius: 100vw;
+  overflow: hidden;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fa-star {
+  color: var(--golden);
+}
+
+.review-container {
+  width: 650px;
+  max-width: 100%;
+  flex: 1;
+}
+
+.arrow {
+  width: 2.5rem;
+  aspect-ratio: 1;
+  border-radius: 100vw;
+  background-color: var(--golden);
+  color: var(--lead);
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+/* SECTION 04 */
+
+.app-container {
+  background-color: var(--hint-yellow);
+  padding: 3rem 6rem;
+  border-radius: 3rem;
+}
+
+.app-container h2 {
+  font-size: 4.5rem;
+}
+
+.app-container img {
+  width: 25rem;
+}
+
+/* SECTION 05 */
+.input-container {
+  width: 43rem;
+  max-width: 100%;
+  background-color: #f2bd12;
+  padding: 0.8rem;
+  background-color: var(--pure-white);
+  box-shadow: rgba(0, 0, 0, 0.107) 0 5px 8px;
+  border-radius: 1rem;
+  margin: 4rem auto 0 auto;
+}
+
+.input-container input {
+  flex: 1;
+  height: 7vh;
+  background-color: transparent;
+  border: none;
+  font-size: 1.1rem;
+  padding-left: 1rem;
+  outline: none;
+}
+
+/* FOOTER STYLING */
+
+.footer-container {
+  margin-top: 10rem;
+  padding-block: 4rem;
+  background-color: var(--hint-yellow);
+}
+
+.footer-container .flex {
+  align-items: flex-start;
+}
+
+.footer-wrapper .social-icon {
+  background-color: var(--pure-white);
+}
+
+.footer-wrapper .social-icon:hover {
+  background-color: var(--lead);
+}
+
+.footer-wrapper {
+  flex: 1;
+  flex-basis: 150px;
+}
+
+.footer-wrapper:nth-child(1) {
+  flex: 2;
+  flex-basis: 300px;
+}
+
+.footer-link {
+  color: gray;
+  font-size: 1.1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+  color: var(--lead);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 780px) {
+  /* HEADER STYLING */
+
+  .navlist,
+  .action .btn {
+    display: none;
+  }
+
+  .action .hamburger {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: absolute;
+    top: 20%;
+    left: -100%;
+    transform: translateX(-50%);
+    background-color: var(--pure-white);
+    border: 0.1rem solid var(--golden);
+    border-radius: 2rem;
+    width: 20rem;
+    padding: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.244) 0 1px 3px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .mobile-menu-active {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* SECTION STYLING */
+
+  h1 {
+    font-size: 3.6rem;
+  }
+  .content {
+    padding-top: 3rem;
+  }
+
+  .gap-2 {
+    gap: 1.4rem;
+  }
+  .gap-4 {
+    gap: 4rem;
+  }
+
+  /* SECTION 01 */
+
+  .heading-section1 h2 {
+    font-size: 3rem;
+  }
+
+  /* SECTION 04 */
+
+  .app-container {
+    padding: 2.2rem;
+  }
+
+  .app-container .content h2 {
+    font-size: 3.5rem;
+  }
+
+  /* SECTION 05 */
+}
